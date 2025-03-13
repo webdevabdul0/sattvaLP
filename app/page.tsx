@@ -12,10 +12,13 @@ import Legislation from "./components/Legislation";
 import Contact from "./components/Contact";
 import Philosophy from "./components/Philosophy";
 import RecommendedApp from "./components/RecommendedApp";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 const Page = () => {
   return (
     <div>
+      <Header />
       {/* Full-Screen Hero Section */}
       <section className="w-full h-screen ">
         <Hero />
@@ -32,6 +35,8 @@ const Page = () => {
       <Philosophy />
       <RecommendedApp />
       <Contact />
+      <Footer />
+
       {/** <div className="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-12">
       </div> */}
     </div>
