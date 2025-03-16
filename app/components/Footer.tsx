@@ -28,22 +28,23 @@ const Footer = () => {
               Szolgáltatások
             </h5>
 
-            <ul className="text-base text-white  mt-5 flex flex-col items-center lg:items-start">
+            <ul className="text-base text-white mt-5 flex flex-col items-center lg:items-start">
               <li className="mb-2">
-                <a href="#HACCP">HACCP</a>
+                <a href="#haccp">HACCP</a>
               </li>
               <li className="mb-2">
-                <a href="#Kockázatértékelés">Kockázatértékelés</a>
+                <a href="#kockazatertekeles">Kockázatértékelés</a>
               </li>
               <li className="mb-2">
-                <a href="#Munka-es-tuzvedelem">Munka és tűzvédelem</a>
+                <a href="#tuzvedelem">Munka és tűzvédelem</a>
               </li>
               <li className="mb-2">
-                <a href="#Audit">Audit</a>
+                <a href="#audit">Audit</a>
               </li>
               <li className="mb-2">
-                <a href="#Oktatas">Oktatás</a>
+                <a href="#oktatas">Oktatás</a>
               </li>
+
               <li className="text-primary">Adatvédelmi Irányelvek</li>
             </ul>
           </div>

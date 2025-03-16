@@ -17,25 +17,63 @@ import Header from "./components/Header";
 
 const Page = () => {
   return (
-    <div>
-      <Header />
+    <div className="relative">
+      <div className="fixed top-0 z-50 w-full">
+        <Header />
+      </div>
+
       {/* Full-Screen Hero Section */}
       <section className="w-full h-screen ">
         <Hero />
       </section>
       {/* Main Content (Centered) */}
-      <Partners />
-      <Regulations />
-      <Haccp />
-      <RiskAssessment />
-      <FireProtection />
-      <Audit />
-      <Education />
-      <Legislation />
-      <Philosophy />
-      <RecommendedApp />
-      <Contact />
-      <Footer />
+      <div id="kezdolap">
+        <Partners />
+      </div>
+
+      <div id="szabalyok">
+        <Regulations />
+      </div>
+
+      <div id="haccp">
+        <Haccp />
+      </div>
+
+      <div id="kockazatertekeles">
+        <RiskAssessment />
+      </div>
+
+      <div id="tuzvedelem">
+        <FireProtection />
+      </div>
+
+      <div id="audit">
+        <Audit />
+      </div>
+
+      <div id="oktatas">
+        <Education />
+      </div>
+
+      <div id="jogszabalyok">
+        <Legislation />
+      </div>
+
+      <div id="filozofia">
+        <Philosophy />
+      </div>
+
+      <div id="ajanlott-app">
+        <RecommendedApp />
+      </div>
+
+      <div id="kapcsolat">
+        <Contact />
+      </div>
+
+      <div id="footer">
+        <Footer />
+      </div>
 
       {/** <div className="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-12">
       </div> */}
