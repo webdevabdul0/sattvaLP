@@ -14,7 +14,7 @@ const partnerImages = Array.from(
 const Partners = () => {
   return (
     <div className="bg-dark py-10 md:py-20 relative">
-      <div className=" mx-auto px-6 sm:px-8 lg:px-12 flex flex-col justify-center items-center">
+      <div className=" mx-auto px-4 sm:px-8 lg:px-12 flex flex-col justify-center items-center">
         <h2 className="text-3xl text-primary font-mono mb-8 md:mb-16 text-center md:text-start">
           Akik minket választottak
         </h2>
@@ -51,11 +51,11 @@ const Partners = () => {
         </Swiper>
 
         {/* Navigation Arrows */}
-        <button className="z-20 hidden sm:block partners-prev absolute left-6 top-1/2 transform -translate-y-1/2 text-white p-2 bg-primary/50 rounded-full hover:bg-primary/70">
-          <ChevronLeft size={24} />
+        <button className="z-20   partners-prev absolute left-3 sm:lef-6 top-1/2 transform -translate-y-1/2 text-white p-2 bg-primary/50 rounded-full hover:bg-primary/70">
+          <ChevronLeft className="size-[16px] sm:size-[24px]" />
         </button>
-        <button className="z-20 partners-next hidden sm:block absolute right-6 top-1/2 transform -translate-y-1/2 text-white p-2 bg-primary/50 rounded-full hover:bg-primary/70">
-          <ChevronRight size={24} />
+        <button className="z-20 partners-next  absolute right-3 sm:right-6 top-1/2 transform -translate-y-1/2 text-white p-2 bg-primary/50 rounded-full hover:bg-primary/70">
+          <ChevronRight className="size-[16px] sm:size-[24px]" />
         </button>
       </div>
     </div>

@@ -16,14 +16,14 @@ const Haccp = () => {
 
   return (
     <div className="py-10 md:py-20 relative">
-      <div className="mx-auto px-6 sm:px-8 lg:px-12 flex flex-col justify-center items-center">
+      <div className="mx-auto px-3 sm:px-8 lg:px-12 flex flex-col justify-center items-center">
         <div className="max-w-screen-2xl flex flex-row justify-start  w-full mb-8">
-          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-mono uppercase bg-gradient-to-tr from-[#20201F] to-[#666666] text-transparent bg-clip-text text-center">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-mono uppercase bg-gradient-to-tr from-[#20201F] to-[#666666] text-transparent bg-clip-text text-center">
             haccp
           </h2>
         </div>
 
-        <div className="w-full bg-black/10 flex flex-col items-center justify-center px-8 relative">
+        <div className="w-full bg-black/10 flex flex-col items-center justify-center px-3 sm:px-8 relative">
           {/* Background Image */}
           <div
             className="absolute inset-0 bg-no-repeat bg-cover bg-center  z-[-1]"
@@ -31,9 +31,9 @@ const Haccp = () => {
           ></div>
 
           <div className="flex items-center justify-center">
-            <div className="max-w-screen-2xl flex flex-col lg:flex-row justify-between items-stretch gap-x-16">
+            <div className="sm:max-w-screen-2xl flex flex-col lg:flex-row justify-between items-stretch gap-x-16">
               {/* Left Side Content */}
-              <div className="flex-1 pt-20">
+              <div className=" sm:flex-1 pt-10 sm:pt-20">
                 <h3 className="text-2xl lg:text-3xl xl:text-4xl font-mono mb-4">
                   Amiért minket válassz
                 </h3>
@@ -50,10 +50,10 @@ const Haccp = () => {
                   ))}
                 </ul>
 
-                <p className="text-base sm:text-lg font-semibold mb-4">
+                <p className="text-base sm:text-lg font-semibold mb-4 tex-wrap w-full">
                   A HACCP kézikönyvet alapos helyszíni felmérés után
                   szakembereink az általunk szerzett információk alapján
-                  teljesen az egységedre szabva alakítják ki. Az árak 20.000
+                  teljesen az egységedre szabva alakítják ki. Az árak 25.000
                   Ft-tól kezdődnek, és az egyedi igényeidtől függően
                   változhatnak.
                   <br /> Ne habozz, kérd az ingyenes állapotfelmérést! Ha bármi
@@ -71,7 +71,7 @@ const Haccp = () => {
               {/* Image */}
               <div className="flex-1 flex items-center mt-20  lg:mt-0">
                 <div className="w-full h-full select-none">
-                  <div className="relative w-full h-[1000px]">
+                  <div className="relative w-full h-[450px] sm:h-[1000px]">
                     <Image
                       src={Image1}
                       alt="Image"

@@ -27,18 +27,18 @@ const RecommendedApp = () => {
             className="w-[150px] md:w-[300px]  mb-5 md:mb-0"
           />
 
-          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-mono uppercase text-primary  text-center">
+          <h2 className="text-3xl lg:text-5xl xl:text-6xl font-mono uppercase text-primary  text-center">
             Ajánlott alkalmazás
           </h2>
         </div>
 
-        <div className="w-full border-t-2  border-t-primary flex flex-col items-center justify-center px-8 relative">
+        <div className="w-full border-t-2  border-t-primary flex flex-col items-center justify-center px-3 sm:px-8 relative">
           <div className="flex items-center justify-center">
             {/* Background Image */}
 
             <div className="max-w-screen-2xl flex flex-col lg:flex-row justify-between items-stretch gap-x-16 ">
               {/* Image */}
-              <div className="flex-1 flex items-center mt-20  md:mt-0 pr-8 pt-8 pb-10 md:pb-20">
+              <div className="flex-1 flex items-center mt-10 sm:mt-20  md:mt-0 lg:pr-8 pt-8 pb-10 md:pb-20">
                 <div className="w-full h-full select-none">
                   <div className="relative w-[130%] h-60 sm:h-80  md:h-[500px]  lg:h-[800px]  left-[-20%]">
                     <div className="w-full h-full hidden sm:flex"></div>
@@ -52,7 +52,7 @@ const RecommendedApp = () => {
               </div>
 
               {/* Left Side Content */}
-              <div className="flex-1 pt-20 pb-10 md:pb-20">
+              <div className="flex-1 pt-10 sm:pt-20 pb-10 md:pb-20">
                 <h3 className="text-2xl lg:text-3xl xl:text-5xl font-semibold text-primary mb-4">
                   Ismerd meg a Qoodo alkalmazást: a minőségirányítás új eszköze!
                 </h3>
@@ -97,7 +97,7 @@ const RecommendedApp = () => {
                   ))}
                 </ul>
 
-                <div className="flex items-center gap-4 mt-20">
+                <div className="flex flex-col sm:flex-row items-center gap-4 mt-10 sm:mt-20">
                   <Button text="Kérj ingyenes konzultációt!" />
                   <ButtonOutline text="Próbáld ki az alkalmazást!" />
                 </div>

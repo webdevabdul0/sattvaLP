@@ -19,12 +19,12 @@ const Audit = () => {
     <div className="pt-10 md:pt-20 relative bg-dark text-white ">
       <div className="mx-auto px-6 sm:px-8 lg:px-12 flex flex-col justify-center items-center">
         <div className="max-w-screen-2xl flex flex-row justify-end  w-full mb-8">
-          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-mono uppercase text-primary  text-center">
+          <h2 className="text-3xl lg:text-5xl xl:text-6xl font-mono uppercase text-primary  text-center">
             Audit
           </h2>
         </div>
 
-        <div className="w-full border-t-2  border-y-primary flex flex-col items-center justify-center px-8 relative ">
+        <div className="w-full border-t-2  border-y-primary flex flex-col items-center justify-center px-3 sm:px-8 relative ">
           <div className="flex items-center justify-center">
             {/* Background Image */}
             <div
@@ -34,9 +34,9 @@ const Audit = () => {
 
             <div className="max-w-screen-2xl flex flex-col md:flex-row justify-between items-stretch gap-x-16 ">
               {/* Image */}
-              <div className="flex-1 flex items-center mt-20  md:mt-0 pr-8 lg:border-r-2 lg:border-r-primary pt-8 pb-8 md:pb-8">
+              <div className="flex-1 flex items-center mt-10 sm:mt-20  md:mt-0 sm:pr-8 lg:border-r-2 lg:border-r-primary sm:pt-8 sm:pb-8 ">
                 <div className="w-full h-full select-none">
-                  <div className="relative w-full h-[1000px]">
+                  <div className="relative w-full h-[450px] sm:h-[1000px]">
                     <Image
                       src={Image4}
                       alt="Image"
@@ -48,7 +48,7 @@ const Audit = () => {
               </div>
 
               {/* Left Side Content */}
-              <div className="flex-1 pt-20 pb-10 md:pb-20">
+              <div className="flex-1 pt-10 sm:pt-20 pb-10 md:pb-20">
                 <h3 className="text-2xl lg:text-3xl xl:text-5xl font-semibold text-primary mb-4">
                   Teljes körű felkészítés, maximális biztonság
                 </h3>

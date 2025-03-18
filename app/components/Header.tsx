@@ -136,10 +136,11 @@ const Header = () => {
       {/* Fullscreen Mobile Menu */}
       {mobileMenuOpen && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed w-screen h-screen inset-0 bg-dark/90 backdrop-blur-xl flex flex-col items-center justify-center text-white z-50"
+          initial={{ x: "100%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: "100%", opacity: 0 }}
+          transition={{ type: "tween", duration: 0.3 }}
+          className="fixed w-screen h-screen inset-0 bg-dark/90 backdrop-blur-2xl flex flex-col items-center justify-center text-white z-50"
         >
           {/* Close Button */}
           <button
@@ -220,7 +221,7 @@ const Header = () => {
           {/* Social Icons */}
           <div className="mt-8 flex space-x-4">
             <a
-              href="#"
+              href="https://web.facebook.com/sattva.guidance/?_rdc=1&_rdr#"
               className="p-3 bg-primary rounded-full flex items-center justify-center"
             >
               <FaFacebookF className="w-4 h-4 text-dark" />

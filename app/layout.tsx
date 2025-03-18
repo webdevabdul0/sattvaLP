@@ -17,6 +17,9 @@ const dmSerifDisplay = DM_Serif_Display({
 export const metadata: Metadata = {
   title: "Sattva",
   description: "Sattva - A Modern Landing Page",
+  icons: {
+    icon: "/favico.ico", // Make sure the file is named correctly and located in /public
+  },
 };
 
 export default function RootLayout({

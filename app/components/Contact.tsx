@@ -10,9 +10,9 @@ import ContactForm from "./ContactForm";
 const Contact = () => {
   return (
     <div className=" pt-10 md:pt-20 pb-20 relative  mx-auto   max-w-screen-2xl flex items-center justify-center w-full">
-      <div className="w-full flex flex-col lg:flex-row justify-between px-6 sm:px-8 lg:px-12 2xl:px-0">
+      <div className="w-full flex flex-col lg:flex-row justify-between px-3 sm:px-8 lg:px-12 2xl:px-0">
         {/* Left Side Content */}
-        <div className="flex-1 py-20 px-10 flex flex-col lg:justify-between bg-dark relative overflow-hidden">
+        <div className="flex-1 py-10 sm:py-20 px-10 flex flex-col lg:justify-between bg-dark relative overflow-hidden">
           <div className="absolute bottom-0 right-0">
             {/* Container for the circles */}
             <div className="relative ">
@@ -20,7 +20,7 @@ const Contact = () => {
               <div className="absolute w-100 h-100 bg-[#1A1A1A] rounded-full -top-70 -right-30"></div>
 
               {/* Second Circle - Lighter Gray (#484848) with 50% Opacity */}
-              <div className="absolute w-48 h-48 bg-[#484848] opacity-50 rounded-full bottom-30 right-30"></div>
+              <div className="absolute w-48 h-48 bg-[#484848] opacity-30 rounded-full bottom-30 right-30"></div>
             </div>
           </div>
 

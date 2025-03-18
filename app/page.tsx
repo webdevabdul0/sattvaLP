@@ -14,6 +14,7 @@ import Philosophy from "./components/Philosophy";
 import RecommendedApp from "./components/RecommendedApp";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import { PhoneCall } from "lucide-react";
 
 const Page = () => {
   return (
@@ -73,6 +74,14 @@ const Page = () => {
 
       <div id="footer">
         <Footer />
+      </div>
+
+      <div className="fixed bottom-6 right-6 z-50">
+        <a href="tel:+36302483007">
+          <button className="w-12 h-12 flex items-center justify-center rounded-full bg-primary shadow-lg">
+            <PhoneCall className="w-6 h-6 text-black" />
+          </button>
+        </a>
       </div>
 
       {/** <div className="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-12">

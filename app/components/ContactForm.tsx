@@ -18,7 +18,7 @@ export default function ContactForm() {
   return (
     <div className="flex-[1.4] flex items-center">
       <div className="w-full h-full select-none">
-        <div className="relative w-full h-[900px] flex items-center justify-center">
+        <div className="relative w-full md:h-[900px] flex items-center justify-center">
           <form className="p-8 rounded-lg w-full  h-full">
             {/* Name Fields */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
@@ -101,7 +101,7 @@ export default function ContactForm() {
             </div>
 
             {/* Submit Button */}
-            <div className="mt-20 flex justify-start">
+            <div className="mt-10 sm:mt-20 flex justify-start">
               <button className="bg-[#D4A647] text-white px-6 py-3 flex items-center gap-2 rounded-full hover:bg-[#C4973B] transition">
                 Küldés <ArrowRight className="w-5 h-5" />
               </button>

@@ -51,7 +51,7 @@ const Regulations = () => {
             <SwiperSlide key={index} className="flex justify-center relative">
               <div className="w-full h-full select-none cursor-pointer">
                 {/* Dynamic Title */}
-                <h3 className="text-lg md:text-2xl xl:text-3xl text-white font-semibold absolute bottom-3 left-3 ">
+                <h3 className="text-lg md:text-2xl xl:text-3xl text-white font-semibold absolute bottom-3 left-3 uppercase">
                   {regulationTitles[index]}
                 </h3>
                 <img
@@ -65,11 +65,11 @@ const Regulations = () => {
         </Swiper>
 
         {/* Navigation Arrows */}
-        <button className="z-20 regulations-prev absolute left-6 top-1/2 transform -translate-y-1/2 text-white p-2 bg-black/50 rounded-full hover:bg-black/70">
-          <ChevronLeft size={32} />
+        <button className="z-20 backdrop-blur-2xl regulations-prev absolute left-3 sm:lef-6 top-1/2 transform -translate-y-1/2 text-white p-2 bg-black/50 rounded-full hover:bg-black/70">
+          <ChevronLeft className="size-[16px] sm:size-[24px]" />
         </button>
-        <button className="z-20 regulations-next absolute right-6 top-1/2 transform -translate-y-1/2 text-white p-2 bg-black/50 rounded-full hover:bg-black/70">
-          <ChevronRight size={32} />
+        <button className="z-20 backdrop-blur-2xl regulations-next absolute right-3 sm:right-6 top-1/2 transform -translate-y-1/2 text-white p-2 bg-black/50 rounded-full hover:bg-black/70">
+          <ChevronRight className="size-[16px] sm:size-[24px]" />
         </button>
       </div>
     </div>

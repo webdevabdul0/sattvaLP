@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
 
           <div className="flex justify-center items-center">
-            <Image src={SatvaLogo} alt="LOGO" />
+            <Image src={SatvaLogo} alt="LOGO" className="size-36 sm:size-max" />
           </div>
 
           <div className="flex flex-col items-center my-10 lg:my-0 lg:items-end">
