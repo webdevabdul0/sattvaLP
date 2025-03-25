@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Menu } from "lucide-react";
+import { Link, Menu } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "../../public/images/logo-icon.png";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
@@ -14,32 +14,39 @@ const Header = () => {
   return (
     <header className="w-full px-4 pt-3 pb-2 flex items-center justify-center bg-dark/30 backdrop-blur-3xl">
       <div className="max-w-screen-2xl flex justify-between items-center w-full">
-        {/* Logo */}
         <div className="flex items-center">
-          <Image src={logo} alt="Sattva Logo" width={70} height={30} />
+          <a href="/">
+            <Image
+              src={logo}
+              alt="Sattva Logo"
+              width={70}
+              height={30}
+              className="cursor-pointer"
+            />
+          </a>
         </div>
 
         {/* Navigation Links (Desktop Only) */}
         <nav className="hidden md:flex space-x-8 text-white text-base font-normal uppercase">
-          <a href="#kezdolap" className="hover:text-primary">
+          <a href="/#kezdolap" className="hover:text-primary">
             ◇ Kezdőlap
           </a>
-          <a href="#haccp" className="hover:text-primary">
+          <a href="/#haccp" className="hover:text-primary">
             HACCP
           </a>
-          <a href="#kockazatertekeles" className="hover:text-primary">
+          <a href="/#kockazatertekeles" className="hover:text-primary">
             Kockázatértékelés
           </a>
-          <a href="#tuzvedelem" className="hover:text-primary">
+          <a href="/#tuzvedelem" className="hover:text-primary">
             Tűzvédelem
           </a>
-          <a href="#audit" className="hover:text-primary">
+          <a href="/#audit" className="hover:text-primary">
             Audit
           </a>
-          <a href="#oktatas" className="hover:text-primary">
+          <a href="/#oktatas" className="hover:text-primary">
             Oktatás
           </a>
-          <a href="#kapcsolat" className="hover:text-primary">
+          <a href="/#kapcsolat" className="hover:text-primary">
             Kapcsolat
           </a>
         </nav>
@@ -78,25 +85,25 @@ const Header = () => {
                 {/* Links */}
                 <div className="mt-8 space-y-4">
                   <a
-                    href="#jogszabalyok"
+                    href="/#jogszabalyok"
                     className="block text-white hover:text-primary"
                   >
                     ◇ Jogszabályok
                   </a>
                   <a
-                    href="#filozofia"
+                    href="/#filozofia"
                     className="block text-white hover:text-primary"
                   >
                     Sattva Filozófia
                   </a>
                   <a
-                    href="#ajanlott-app"
+                    href="/#ajanlott-app"
                     className="block text-white hover:text-primary"
                   >
                     Ajánlatkérés
                   </a>
                   <a
-                    href="#kapcsolat"
+                    href="/#kapcsolat"
                     className="block text-white hover:text-primary"
                   >
                     Kapcsolat
@@ -109,19 +116,19 @@ const Header = () => {
                 {/* Social Icons */}
                 <div className="flex justify-center space-x-3">
                   <a
-                    href="#"
+                    href="/#"
                     className="p-2 bg-primary rounded-full flex items-center justify-center"
                   >
                     <FaFacebookF className="w-3.5 h-3.5 text-dark" />
                   </a>
                   <a
-                    href="#"
+                    href="/#"
                     className="p-2 bg-primary rounded-full flex items-center justify-center"
                   >
                     <FaTwitter className="w-3.5 h-3.5 text-dark" />
                   </a>
                   <a
-                    href="#"
+                    href="/#"
                     className="p-2 bg-primary rounded-full flex items-center justify-center"
                   >
                     <FaInstagram className="w-3.5 h-3.5 text-dark" />
@@ -153,42 +160,42 @@ const Header = () => {
           {/* Mobile Links */}
           <nav className="text-center space-y-6 text-lg uppercase">
             <a
-              href="#kezdolap"
+              href="/#kezdolap"
               className="block hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
               ◇ Kezdőlap
             </a>
             <a
-              href="#haccp"
+              href="/#haccp"
               className="block hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
               HACCP
             </a>
             <a
-              href="#kockazatertekeles"
+              href="/#kockazatertekeles"
               className="block hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
               Kockázatértékelés
             </a>
             <a
-              href="#tuzvedelem"
+              href="/#tuzvedelem"
               className="block hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
               Tűzvédelem
             </a>
             <a
-              href="#audit"
+              href="/#audit"
               className="block hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
               Audit
             </a>
             <a
-              href="#oktatas"
+              href="/#oktatas"
               className="block hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -196,21 +203,21 @@ const Header = () => {
             </a>
 
             <a
-              href="#jogszabalyok"
+              href="/#jogszabalyok"
               className="block  hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
               Jogszabályok
             </a>
             <a
-              href="#filozofia"
+              href="/#filozofia"
               className="block  hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
               Sattva Filozófia
             </a>
             <a
-              href="#kapcsolat"
+              href="/#kapcsolat"
               className="block hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -221,19 +228,19 @@ const Header = () => {
           {/* Social Icons */}
           <div className="mt-8 flex space-x-4">
             <a
-              href="https://web.facebook.com/sattva.guidance/?_rdc=1&_rdr#"
+              href="https://web.facebook.com/sattva.guidance/?_rdc=1&_rdr/#"
               className="p-3 bg-primary rounded-full flex items-center justify-center"
             >
               <FaFacebookF className="w-4 h-4 text-dark" />
             </a>
             <a
-              href="#"
+              href="/#"
               className="p-3 bg-primary rounded-full flex items-center justify-center"
             >
               <FaTwitter className="w-4 h-4 text-dark" />
             </a>
             <a
-              href="#"
+              href="/#"
               className="p-3 bg-primary rounded-full flex items-center justify-center"
             >
               <FaInstagram className="w-4 h-4 text-dark" />

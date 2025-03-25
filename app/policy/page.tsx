@@ -1,6 +1,9 @@
 import React from "react";
 import ButtonOutline from "../components/ui/ButtonOutline";
 import Background from "../../public/images/Images/Background3.png";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { PhoneCall } from "lucide-react";
 const page = () => {
   const laws = [
     {
@@ -102,7 +105,11 @@ const page = () => {
 
   return (
     <div className="relative">
-      <div className="pt-10 md:pt-20 relative">
+      <div className="fixed top-0 z-50 w-full">
+        <Header />
+      </div>
+
+      <div className="pt-30 md:pt-40 relative pb-40">
         <div className="mx-auto px-3 sm:px-8 lg:px-12 flex flex-col justify-center items-center">
           <div className="max-w-screen-2xl flex flex-row justify-start  w-full sm:mb-8">
             <h2 className="text-3xl lg:text-5xl xl:text-6xl font-mono uppercase bg-gradient-to-tr from-[#20201F] to-[#666666] text-transparent bg-clip-text text-center">
@@ -141,11 +148,23 @@ const page = () => {
               ))}
 
               <div className="flex items-center gap-4 mt-10 sm:mt-20">
-                <ButtonOutline text="Megrendelem" />
+                <ButtonOutline text="Vissza a kezdőlapra" />
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div id="footer">
+        <Footer />
+      </div>
+
+      <div className="fixed bottom-6 right-6 z-50">
+        <a href="tel:+36302483007">
+          <button className="w-12 h-12 flex items-center justify-center rounded-full bg-primary shadow-lg">
+            <PhoneCall className="w-6 h-6 text-black" />
+          </button>
+        </a>
       </div>
     </div>
   );
