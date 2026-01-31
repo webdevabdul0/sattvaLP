@@ -71,9 +71,14 @@ export default function ContactForm() {
         });
         setSelected(null);
       } else {
+        // Show detailed error message for debugging
+        const errorText = data.debug 
+          ? `${data.message}\n\nDebug: ${data.debug}` 
+          : data.message || "Hiba történt az üzenet küldése során.";
+        
         setSubmitMessage({
           type: "error",
-          text: data.message || "Hiba történt az üzenet küldése során.",
+          text: errorText,
         });
       }
     } catch (error) {

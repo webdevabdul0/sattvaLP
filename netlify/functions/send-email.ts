@@ -13,6 +13,8 @@ export const handler: Handler = async (event) => {
   try {
     const { firstName, lastName, email, phone, subject, message } = JSON.parse(event.body || '{}');
 
+    console.log('Form submission received:', { firstName, lastName, email, phone, subject });
+
     // Validate required fields
     if (!firstName || !lastName || !email || !phone || !subject || !message) {
       return {
@@ -26,6 +28,8 @@ export const handler: Handler = async (event) => {
     // Check if environment variables are set
     if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
       console.error('Missing environment variables: GMAIL_USER or GMAIL_APP_PASSWORD');
+      console.error('GMAIL_USER exists:', !!process.env.GMAIL_USER);
+      console.error('GMAIL_APP_PASSWORD exists:', !!process.env.GMAIL_APP_PASSWORD);
       return {
         statusCode: 500,
         body: JSON.stringify({ 
@@ -33,6 +37,8 @@ export const handler: Handler = async (event) => {
         }),
       };
     }
+
+    console.log('Creating transporter with user:', process.env.GMAIL_USER);
 
     // Create transporter using Gmail
     const transporter = nodemailer.createTransport({
@@ -42,6 +48,11 @@ export const handler: Handler = async (event) => {
         pass: process.env.GMAIL_APP_PASSWORD,
       },
     });
+
+    // Verify transporter configuration
+    console.log('Verifying transporter...');
+    await transporter.verify();
+    console.log('Transporter verified successfully');
 
     // Email content
     const mailOptions = {
@@ -59,8 +70,9 @@ export const handler: Handler = async (event) => {
       `,
     };
 
-    // Send email
-    await transporter.sendMail(mailOptions);
+    console.log('Sending email...');
+    const info = await transporter.sendMail(mailOptions);
+    console.log('Email sent successfully:', info.messageId);
 
     return {
       statusCode: 200,
@@ -69,11 +81,20 @@ export const handler: Handler = async (event) => {
   } catch (error) {
     console.error('Error sending email:', error);
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-    console.error('Error details:', errorMessage);
+    const errorCode = (error as any).code || 'UNKNOWN';
+    const errorResponse = (error as any).response || 'No response';
+    
+    console.error('Error details:', {
+      message: errorMessage,
+      code: errorCode,
+      response: errorResponse,
+    });
+    
     return {
       statusCode: 500,
       body: JSON.stringify({ 
         message: 'Hiba történt az email küldése során. Kérjük, próbálja újra vagy hívjon: +36 30 248 3007',
+        debug: `Error: ${errorCode} - ${errorMessage}`,
       }),
     };
   }
