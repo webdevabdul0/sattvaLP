@@ -87,7 +87,14 @@ const Hero = () => {
               <p className="text-base sm:text-lg max-w-2xl mb-6">
                 {slide.description}
               </p>
-              <Button text="Kérj ingyenes konzultációt" />
+              <Button 
+                text="Kérj ingyenes konzultációt" 
+                onClick={() => {
+                  document.getElementById('kapcsolat')?.scrollIntoView({ 
+                    behavior: 'smooth' 
+                  });
+                }}
+              />
             </div>
           </SwiperSlide>
         ))}

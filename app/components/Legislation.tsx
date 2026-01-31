@@ -76,7 +76,7 @@ const Legislation = () => {
                 </p>
 
                 <div className="flex items-center gap-4 mt-10 sm:mt-20">
-                  <Button text="Elolvasom a jogszabályokat" />
+                  <Button text="Elolvasom a jogszabályokat" href="/policy" />
                 </div>
               </div>
             </div>

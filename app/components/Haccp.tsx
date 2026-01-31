@@ -63,8 +63,8 @@ const Haccp = () => {
                 </p>
 
                 <div className="flex items-center gap-4 mt-20">
-                  <ButtonOutline text="Ajánlatot kérek!" />
-                  <ButtonOutline text="Hívlak a részletekért!" />
+                  <ButtonOutline text="Ajánlatot kérek!" href="#kapcsolat" />
+                  <ButtonOutline text="Hívlak a részletekért!" href="tel:+36302483007" />
                 </div>
               </div>
 

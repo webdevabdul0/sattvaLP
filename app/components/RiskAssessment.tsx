@@ -81,7 +81,7 @@ const RiskAssessment = () => {
                 </ul>
 
                 <div className="flex items-center gap-4 mt-20">
-                  <Button text="Megrendelem" />
+                  <Button text="Megrendelem" href="#kapcsolat" />
                 </div>
               </div>
             </div>

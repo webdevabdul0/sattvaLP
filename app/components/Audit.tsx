@@ -90,7 +90,7 @@ const Audit = () => {
                 </p>
 
                 <div className="flex items-center gap-4 mt-20">
-                  <Button text="Megrendelem" />
+                  <Button text="Megrendelem" href="#kapcsolat" />
                 </div>
               </div>
             </div>
@@ -104,7 +104,7 @@ const Audit = () => {
                 <h4 className="text-primary font-mono text-2xl ">Arany</h4>
 
                 <div className="text-white">
-                  <ButtonOutline text="Megrendelem" />
+                  <ButtonOutline text="Megrendelem" href="#kapcsolat" />
                 </div>
               </div>
             </div>
@@ -116,7 +116,7 @@ const Audit = () => {
                 <h4 className="text-primary font-mono text-2xl">Platina</h4>
 
                 <div className="text-white">
-                  <ButtonOutline text="Megrendelem" />
+                  <ButtonOutline text="Megrendelem" href="#kapcsolat" />
                 </div>
               </div>
             </div>
@@ -129,7 +129,7 @@ const Audit = () => {
                 <h4 className="text-primary font-mono text-2xl">Gyémánt</h4>
 
                 <div className="text-white">
-                  <ButtonOutline text="Megrendelem" />
+                  <ButtonOutline text="Megrendelem" href="#kapcsolat" />
                 </div>
               </div>
             </div>

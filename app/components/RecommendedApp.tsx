@@ -98,8 +98,8 @@ const RecommendedApp = () => {
                 </ul>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 mt-10 sm:mt-20">
-                  <Button text="Kérj ingyenes konzultációt!" />
-                  <ButtonOutline text="Próbáld ki az alkalmazást!" />
+                  <Button text="Kérj ingyenes konzultációt!" href="#kapcsolat" />
+                  <ButtonOutline text="Próbáld ki az alkalmazást!" href="https://qoodo.com" />
                 </div>
               </div>
             </div>

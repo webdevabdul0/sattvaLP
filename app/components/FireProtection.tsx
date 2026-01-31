@@ -58,7 +58,7 @@ const FireProtection = () => {
                 </ul>
 
                 <div className="flex items-center gap-4 mt-10 sm:mt-20">
-                  <ButtonOutline text="Megrendelem" />
+                  <ButtonOutline text="Megrendelem" href="#kapcsolat" />
                 </div>
               </div>
 
