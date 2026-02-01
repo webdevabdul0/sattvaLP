@@ -39,6 +39,9 @@ export const handler: Handler = async (event) => {
     }
 
     console.log('Creating transporter with user:', process.env.GMAIL_USER);
+    console.log('Password length:', process.env.GMAIL_APP_PASSWORD?.length);
+    console.log('Password first 4 chars:', process.env.GMAIL_APP_PASSWORD?.substring(0, 4));
+    console.log('Password has spaces:', process.env.GMAIL_APP_PASSWORD?.includes(' '));
 
     // Create transporter using Gmail
     const transporter = nodemailer.createTransport({

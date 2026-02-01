@@ -4,7 +4,7 @@ import { useState, FormEvent } from "react";
 import { Check } from "lucide-react";
 
 export default function ContactForm() {
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selected, setSelected] = useState<string[]>([]);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -25,16 +25,17 @@ export default function ContactForm() {
     "Munkavédelem",
     "Audit",
     "Oktatás",
+    "Digitális naplózás",
   ];
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     
-    // Validate that a subject is selected
-    if (!selected) {
+    // Validate that at least one subject is selected
+    if (selected.length === 0) {
       setSubmitMessage({
         type: "error",
-        text: "Kérlek válassz egy tárgyat!",
+        text: "Kérlek válassz legalább egy tárgyat!",
       });
       return;
     }
@@ -50,7 +51,7 @@ export default function ContactForm() {
         },
         body: JSON.stringify({
           ...formData,
-          subject: selected,
+          subject: selected.join(", "),
         }),
       });
 
@@ -69,7 +70,7 @@ export default function ContactForm() {
           phone: "",
           message: "",
         });
-        setSelected(null);
+        setSelected([]);
       } else {
         // Show detailed error message for debugging
         const errorText = data.debug 
@@ -157,7 +158,7 @@ export default function ContactForm() {
               </div>
             </div>
 
-            {/* Radio Buttons */}
+            {/* Checkboxes */}
             <div className="mt-20">
               <label className="block text-lg font-medium mb-2">Tárgy?</label>
               <div className="flex flex-wrap gap-4">
@@ -167,21 +168,27 @@ export default function ContactForm() {
                     className="flex items-center space-x-2 cursor-pointer w-full sm:w-auto"
                   >
                     <input
-                      type="radio"
+                      type="checkbox"
                       name="subject"
                       value={item}
-                      checked={selected === item}
+                      checked={selected.includes(item)}
                       className="hidden"
-                      onChange={() => setSelected(item)}
+                      onChange={() => {
+                        if (selected.includes(item)) {
+                          setSelected(selected.filter((s) => s !== item));
+                        } else {
+                          setSelected([...selected, item]);
+                        }
+                      }}
                     />
                     <div
                       className={`w-6 h-6 flex items-center justify-center rounded-full border ${
-                        selected === item
+                        selected.includes(item)
                           ? "bg-black border-black"
                           : "border-gray-400"
                       }`}
                     >
-                      {selected === item && (
+                      {selected.includes(item) && (
                         <Check className="w-4 h-4 text-white" />
                       )}
                     </div>
