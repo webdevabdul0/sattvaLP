@@ -23,86 +23,83 @@ const Philosophy = () => {
   ];
 
   return (
-    <div className="pt-10 md:pt-20 relative">
+    <div className="py-8 md:py-12 relative">
       <div className="mx-auto px-3 sm:px-8 lg:px-12 flex flex-col justify-center items-center">
-        <div className="max-w-screen-2xl flex flex-row justify-start  w-full mb-8">
-          <h2 className="text-3xl lg:text-5xl xl:text-6xl font-mono uppercase bg-gradient-to-tr from-[#20201F] to-[#666666] text-transparent bg-clip-text text-center">
+        <div className="max-w-screen-2xl flex flex-row justify-start w-full mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-mono uppercase bg-gradient-to-tr from-[#20201F] to-[#666666] text-transparent bg-clip-text text-center">
             Sattva filozófia
           </h2>
         </div>
 
-        <div className="w-full  flex flex-col items-center justify-center sm:px-8 relative">
+        <div className="w-full flex flex-col items-center justify-center sm:px-8 relative">
           {/* Background Image */}
           <div
-            className="absolute inset-0 bg-no-repeat bg-cover bg-center  z-[-1]"
+            className="absolute inset-0 bg-no-repeat bg-cover bg-center z-[-1]"
             style={{ backgroundImage: `url(${Background.src})` }}
           ></div>
 
           <div className="flex items-center justify-center">
             <div className="max-w-screen-2xl flex flex-col lg:flex-row justify-between items-stretch gap-x-16">
               {/* Left Side Content */}
-              <div className="flex-1 sm:pt-20">
-                <h3 className="text-2xl lg:text-3xl xl:text-5xl font-semibold text-primary mb-4">
+              <div className="flex-1 pt-8 sm:pt-12">
+                <h3 className="text-xl lg:text-2xl xl:text-3xl font-semibold text-primary mb-3">
                   Tudatosság, Minőség és Fenntartható Siker
                 </h3>
 
-                <p className="text-base sm:text-lg font-semibold mb-4">
+                <p className="text-sm sm:text-base font-normal mb-3">
                   Mindennapjainkban és munkánk során a tökéletességre törekszünk
                   – legyen szó higiéniai előírásokról, szabályok betartásáról
-                  vagy tudatos működésről. A „Sattva” ezt az egyensúlyt
+                  vagy tudatos működésről. A „Sattva" ezt az egyensúlyt
                   képviseli: a tisztaságot, a fenntarthatóságot és a folyamatos
                   fejlődést.
                 </p>
-                <p className="text-base sm:text-lg font-semibold mb-4">
+                <p className="text-sm sm:text-base font-normal mb-3">
                   Az élet minősége szorosan összefügg a tisztasággal és a
                   tudatossággal, amely két szinten is megnyilvánul:
                 </p>
 
-                <ul className="space-y-3 list-none mb-4">
+                <ul className="space-y-2 list-none mb-4">
                   {points1.map((point, index) => (
-                    <li key={index} className="flex items-center gap-4">
-                      <span className="w-2 h-2 bg-dark rounded-full block shrink-0"></span>
-
-                      <p className="text-base sm:text-lg font-semibold">
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-dark rounded-full block shrink-0 mt-2"></span>
+                      <p className="text-sm sm:text-base font-normal">
                         {point}
                       </p>
                     </li>
                   ))}
                 </ul>
 
-                <p className="text-base sm:text-lg font-semibold mb-4">
+                <p className="text-sm sm:text-base font-normal mb-3">
                   A szanszkrit filozófia három minőséget különböztet meg:
                 </p>
 
-                <ul className="space-y-3 list-none mb-4">
+                <ul className="space-y-2 list-none mb-4">
                   {points2.map((point, index) => (
-                    <li key={index} className="flex items-center gap-4">
-                      <span className="w-2 h-2 bg-dark rounded-full block shrink-0"></span>
-
-                      <p className="text-base sm:text-lg font-semibold">
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-dark rounded-full block shrink-0 mt-2"></span>
+                      <p className="text-sm sm:text-base font-normal">
                         {point}
                       </p>
                     </li>
                   ))}
                 </ul>
 
-                <p className="text-base sm:text-lg font-semibold mb-4">
+                <p className="text-sm sm:text-base font-normal mb-3">
                   E filozófia a modern vállalkozások működésében is megjelenik:
                 </p>
 
-                <ul className="space-y-3 list-none mb-4">
+                <ul className="space-y-2 list-none mb-4">
                   {points3.map((point, index) => (
-                    <li key={index} className="flex items-center gap-4">
-                      <span className="w-2 h-2 bg-dark rounded-full block shrink-0"></span>
-
-                      <p className="text-base sm:text-lg font-semibold">
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-dark rounded-full block shrink-0 mt-2"></span>
+                      <p className="text-sm sm:text-base font-normal">
                         {point}
                       </p>
                     </li>
                   ))}
                 </ul>
 
-                <p className="text-base sm:text-lg font-semibold mb-4">
+                <p className="text-sm sm:text-base font-normal mb-6">
                   A siker nem a véletlen műve, hanem egy tudatosan felépített
                   folyamat eredménye. A Sattva küldetése, hogy szakértelmével,
                   tanácsadásával és oktatásaival támogassa ügyfeleit ezen az
@@ -112,9 +109,9 @@ const Philosophy = () => {
               </div>
 
               {/* Image */}
-              <div className="flex-1 flex items-center mt-10 sm:mt-20 my-8  lg:mt-0">
+              <div className="flex-1 flex items-center mt-8 lg:mt-0">
                 <div className="w-full h-full select-none">
-                  <div className="relative w-full h-[400px] sm:h-[1000px]">
+                  <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px]">
                     <Image
                       src={Image7}
                       alt="Image"

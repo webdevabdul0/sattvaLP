@@ -30,13 +30,13 @@ const Contact = () => {
             </h2>
 
             <div className="mt-6 sm:mt-10 lg:mt-20">
-              <p className="text-base sm:text-lg mb-4 text-white ">
+              <p className="text-sm sm:text-base mb-4 text-white">
                 Kérdésed van? <br /> Hívj minket bizalommal az alábbi számon,
                 vagy töltsd ki és küldd el az ajánlatkérő űrlapot, és kollégánk
                 rövidesen kapcsolatba lép veled.
               </p>
 
-              <p className="text-base sm:text-lg text-white mb-4 lg:mb-0">
+              <p className="text-sm sm:text-base text-white mb-4 lg:mb-0">
                 Kérlek, írd meg ha sürgős dokumentáció készítésről van szó, mert
                 akkor prioritásba veszünk, hogy elkészülhessen az anyag a kívánt
                 határidővel.
@@ -44,7 +44,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="flex flex-col z-10 gap-10 text-primary mt-6 sm:mt-10 lg:mt-0 text-base sm:text-lg font-semibold  ">
+          <div className="flex flex-col z-10 gap-10 text-primary mt-6 sm:mt-10 lg:mt-0 text-sm sm:text-base font-semibold">
             <div className="flex flex-row items-center gap-5 ">
               <Phone className="w-8 h-8" />
               <a href="tel:+36302483007" className="hover:underline ">

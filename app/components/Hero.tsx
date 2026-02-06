@@ -84,7 +84,7 @@ const Hero = () => {
                   {slide.title2}
                 </h1>
               </div>
-              <p className="text-base sm:text-lg max-w-2xl mb-6">
+              <p className="text-sm sm:text-base max-w-2xl mb-6">
                 {slide.description}
               </p>
               <Button 

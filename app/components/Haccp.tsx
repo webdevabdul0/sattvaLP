@@ -6,18 +6,18 @@ import Background from "../../public/images/Images/Background1.png";
 import ButtonOutline from "./ui/ButtonOutline";
 const Haccp = () => {
   const points = [
-    "Személyre szabott, professzionális HACCP kézikönyv a területi hatósági ellenőrök igényeinek megfelelően, hogy biztosan megfelelj a legújabb előírásoknak.",
-    "Garanciális dokumentációkészítés, hogy minden szükséges papírmunkát elvégezzünk a megfelelőség biztosítása érdekében.",
-    "Folyamatos támogatás: nem csak a kezdeti tanácsadásban segítünk, hanem folyamatosan elérhetőek vagyunk, hogy bármikor válaszoljunk a kérdéseidre.",
-    "Revízió lehetőségei biztosítása, hogy a kézikönyv mindig naprakész legyen, és könnyen alkalmazkodjon a változó jogszabályokhoz.",
-    "Referenciáink több sikeres projektet is magukban foglalnak, amik bizonyítják szakértelmünket és elkötelezettségünket.",
-    "20+ éves tapasztalat a vendéglátás és minőségbiztosítás területén, így biztos lehetsz benne, hogy nálunk nemcsak elméleti, hanem gyakorlati tudásra is támaszkodhatsz.",
+    "Személyreszabott, professzionális HACCP* kézikönyv a területi hatósági ellenőrök igényeinek megfelelően,",
+    "garanciális dokumentációkészítés,",
+    "folyamatos support, segítségnyújtás és teljeskörű tanácsadás,",
+    "revízió lehetőségek biztosítása,",
+    "referenciáink,",
+    "több mint 15 éves tapasztalat a vendéglátásban és a minőségbiztosítás területén.",
   ];
 
   return (
-    <div className="py-10 md:py-20 relative">
+    <div className="py-8 md:py-12 relative">
       <div className="mx-auto px-3 sm:px-8 lg:px-12 flex flex-col justify-center items-center">
-        <div className="max-w-screen-2xl flex flex-row justify-start  w-full mb-8">
+        <div className="max-w-screen-2xl flex flex-row justify-start w-full mb-6">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-mono uppercase bg-gradient-to-tr from-[#20201F] to-[#666666] text-transparent bg-clip-text text-center">
             haccp
           </h2>
@@ -26,52 +26,51 @@ const Haccp = () => {
         <div className="w-full bg-black/10 flex flex-col items-center justify-center px-3 sm:px-8 relative">
           {/* Background Image */}
           <div
-            className="absolute inset-0 bg-no-repeat bg-cover bg-center  z-[-1]"
+            className="absolute inset-0 bg-no-repeat bg-cover bg-center z-[-1]"
             style={{ backgroundImage: `url(${Background.src})` }}
           ></div>
 
           <div className="flex items-center justify-center">
             <div className="sm:max-w-screen-2xl flex flex-col lg:flex-row justify-between items-stretch gap-x-16">
               {/* Left Side Content */}
-              <div className=" sm:flex-1 pt-10 sm:pt-20">
-                <h3 className="text-2xl lg:text-3xl xl:text-4xl font-mono mb-4">
-                  Amiért minket válassz
+              <div className="sm:flex-1 pt-8 sm:pt-12">
+                <h3 className="text-xl lg:text-2xl xl:text-3xl font-mono mb-3">
+                  Amiért minket válassz:
                 </h3>
 
-                <ul className="space-y-3 list-none mb-4">
+                <ul className="space-y-2 list-none mb-4">
                   {points.map((point, index) => (
-                    <li key={index} className="flex items-center gap-4">
-                      <span className="w-2 h-2 bg-dark rounded-full block shrink-0"></span>
-
-                      <p className="text-base sm:text-lg font-semibold">
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-dark rounded-full block shrink-0 mt-2"></span>
+                      <p className="text-sm sm:text-base font-normal">
                         {point}
                       </p>
                     </li>
                   ))}
                 </ul>
 
-                <p className="text-base sm:text-lg font-semibold mb-4 tex-wrap w-full">
-                  A HACCP kézikönyvet alapos helyszíni felmérés után
-                  szakembereink az általunk szerzett információk alapján
-                  teljesen az egységedre szabva alakítják ki. Az árak 25.000
-                  Ft-tól kezdődnek, és az egyedi igényeidtől függően
-                  változhatnak.
-                  <br /> Ne habozz, kérd az ingyenes állapotfelmérést! Ha bármi
-                  kérdésed van, hívd kollégáinkat bizalommal, vagy töltsd ki az
-                  ajánlatkérő űrlapot, és hamarosan felvesszük veled a
-                  kapcsolatot!
+                <p className="text-sm sm:text-base font-normal mb-3">
+                  A Haccp kézikönyvet egy alapos felmérés után szakembereink a kapott információk alapján az egységedre szabottan alakítják ki.
                 </p>
 
-                <div className="flex items-center gap-4 mt-20">
-                  <ButtonOutline text="Ajánlatot kérek!" href="#kapcsolat" />
-                  <ButtonOutline text="Hívlak a részletekért!" href="tel:+36302483007" />
+                <p className="text-sm sm:text-base font-semibold mb-4">
+                  * Ennek ára az egységtől függően 25.000 Ft-tól kezdődik.
+                </p>
+
+                <p className="text-sm sm:text-base font-normal mb-6">
+                  Ha bármi kérdésed van hívj minket bizalommal, vagy töltsd ki és küldd el az ajánlatkérő űrlapot, és kollégánk rövidesen kapcsolatba lép veled.
+                </p>
+
+                <div className="flex items-center gap-4 mb-8">
+                  <ButtonOutline text="Ajánlatot kérek" href="#kapcsolat" />
+                  <ButtonOutline text="Hívlak a részletekért" href="tel:+36302483007" />
                 </div>
               </div>
 
               {/* Image */}
-              <div className="flex-1 flex items-center mt-20  lg:mt-0">
+              <div className="flex-1 flex items-center mt-8 lg:mt-0">
                 <div className="w-full h-full select-none">
-                  <div className="relative w-full h-[450px] sm:h-[1000px]">
+                  <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px]">
                     <Image
                       src={Image1}
                       alt="Image"
@@ -83,16 +82,8 @@ const Haccp = () => {
               </div>
             </div>
           </div>
-          <p className="text-base sm:text-lg font-normal my-10 md:my-20 max-w-screen-2xl">
-            * A HACCP a veszélyelemzés és a kritikus szabályozási pontok
-            rendszere, egy tudományosan megalapozott és módszeres rendszer,
-            amely az élelmiszer biztonságáról való gondoskodás érdekében
-            megállapítja a jellemző veszélyeket és kijelöli a szabályozásukra
-            szolgáló intézkedéseket. Az általunk készített HACCP kézikönyv
-            tartalmazza az Ön egységére vonatkozó összes kockázatot,
-            szabályozást, technológiai leírást és cselekvési tervet a
-            beszerzéstől a hulladékok kezeléséig kompletten. Egyéb
-            információk: https://portal.nebih.gov.hu/-/vendeglatas-ghp
+          <p className="text-xs sm:text-sm font-normal my-6 md:my-8 max-w-screen-2xl">
+            * A HACCP a veszélyelemzés és a kritikus szabályozási pontok rendszere, egy tudományosan megalapozott és módszeres rendszer, amely az élelmiszer biztonságáról való gondoskodás érdekében megállapítja a jellemző veszélyeket és kijelöli a szabályozásukra szolgáló intézkedéseket. Az általunk készített HACCP kézikönyv tartalmazza az Ön egységére vonatkozó összes kockázatot, szabályozást, technológiai leírást és cselekvési tervet a beszerzéstől a hulladékok kezeléséig kompletten. Egyéb információk: https://portal.nebih.gov.hu/-/vendeglatas-ghp
           </p>
         </div>
       </div>

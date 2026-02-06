@@ -13,30 +13,30 @@ const FireProtection = () => {
   ];
 
   return (
-    <div className="pt-10 md:pt-20 relative">
+    <div className="py-8 md:py-12 relative">
       <div className="mx-auto px-3 sm:px-8 lg:px-12 flex flex-col justify-center items-center">
-        <div className="max-w-screen-2xl flex flex-row justify-start  w-full sm:mb-8">
-          <h2 className="text-3xl lg:text-5xl xl:text-6xl font-mono uppercase bg-gradient-to-tr from-[#20201F] to-[#666666] text-transparent bg-clip-text text-center">
+        <div className="max-w-screen-2xl flex flex-row justify-start w-full mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-mono uppercase bg-gradient-to-tr from-[#20201F] to-[#666666] text-transparent bg-clip-text text-center">
             tűzvédelem
           </h2>
         </div>
 
-        <div className="w-full  flex flex-col items-center justify-center sm:px-8 relative">
+        <div className="w-full flex flex-col items-center justify-center sm:px-8 relative">
           {/* Background Image */}
           <div
-            className="absolute inset-0 bg-no-repeat bg-cover bg-center  z-[-1]"
+            className="absolute inset-0 bg-no-repeat bg-cover bg-center z-[-1]"
             style={{ backgroundImage: `url(${Background.src})` }}
           ></div>
 
           <div className="flex items-center justify-center">
             <div className="max-w-screen-2xl flex flex-col lg:flex-row justify-between items-stretch gap-x-16">
               {/* Left Side Content */}
-              <div className="flex-1 pt-10 sm:pt-20">
-                <h3 className="text-2xl lg:text-3xl xl:text-5xl font-semibold text-primary mb-4">
+              <div className="flex-1 pt-8 sm:pt-12">
+                <h3 className="text-xl lg:text-2xl xl:text-3xl font-semibold text-primary mb-3">
                   Teljes körű tűzvédelmi szolgáltatások egy helyen.
                 </h3>
 
-                <p className="text-base sm:text-lg font-semibold mb-4">
+                <p className="text-sm sm:text-base font-normal mb-4">
                   A tűzvédelmi szabályzat elkészítéséhez szakembereinkkel
                   időpont egyeztetés után egy alapos helyszíni bejárást tartunk.
                   Az így felvett adatok alapján megírjuk a szabályzatot, amit
@@ -45,27 +45,26 @@ const FireProtection = () => {
                   helyszíni felméréshez van kötve.
                 </p>
 
-                <ul className="space-y-3 list-none mb-4">
+                <ul className="space-y-2 list-none mb-6">
                   {points.map((point, index) => (
-                    <li key={index} className="flex items-center gap-4">
-                      <span className="w-2 h-2 bg-dark rounded-full block shrink-0"></span>
-
-                      <p className="text-base sm:text-lg font-semibold">
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-dark rounded-full block shrink-0 mt-2"></span>
+                      <p className="text-sm sm:text-base font-normal">
                         {point}
                       </p>
                     </li>
                   ))}
                 </ul>
 
-                <div className="flex items-center gap-4 mt-10 sm:mt-20">
+                <div className="flex items-center gap-4 mb-8">
                   <ButtonOutline text="Megrendelem" href="#kapcsolat" />
                 </div>
               </div>
 
               {/* Image */}
-              <div className="flex-1 flex items-center mt-10 sm:mt-20 my-8  lg:mt-0">
+              <div className="flex-1 flex items-center mt-8 lg:mt-0">
                 <div className="w-full h-full select-none">
-                  <div className="relative w-full h-[400px] sm:h-[1000px]">
+                  <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px]">
                     <Image
                       src={Image3}
                       alt="Image"
