@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Image1 from "../../public/images/Images/Image1.jpg";
+import Image1 from "../../public/images/Images/Image1.png";
 import Background from "../../public/images/Images/Background1.png";
 
 import ButtonOutline from "./ui/ButtonOutline";
@@ -70,7 +70,7 @@ const Haccp = () => {
               {/* Image */}
               <div className="flex-1 flex items-center mt-8 lg:mt-0">
                 <div className="w-full h-full select-none">
-                  <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px]">
+                  <div className="relative w-full h-[300px] sm:h-[500px] lg:h-[600px]">
                     <Image
                       src={Image1}
                       alt="Image"

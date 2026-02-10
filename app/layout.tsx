@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lato, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
+import ScrollHandler from "./components/ScrollHandler";
 
 const lato = Lato({
   variable: "--font-lato",
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body
         className={`${lato.variable} ${dmSerifDisplay.variable} antialiased`}
       >
+        <ScrollHandler />
         {children}
       </body>
     </html>

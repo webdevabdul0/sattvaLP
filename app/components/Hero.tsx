@@ -91,7 +91,8 @@ const Hero = () => {
                 text="Kérj ingyenes konzultációt" 
                 onClick={() => {
                   document.getElementById('kapcsolat')?.scrollIntoView({ 
-                    behavior: 'smooth' 
+                    behavior: 'smooth',
+                    block: 'start'
                   });
                 }}
               />

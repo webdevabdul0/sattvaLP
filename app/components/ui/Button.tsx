@@ -17,7 +17,8 @@ const Button = ({ text, onClick, href }: ButtonProps) => {
       // If href is an internal anchor (starts with #), scroll to it
       if (href.startsWith('#')) {
         document.getElementById(href.substring(1))?.scrollIntoView({ 
-          behavior: 'smooth' 
+          behavior: 'smooth',
+          block: 'start'
         });
       } else {
         // Otherwise, navigate to the URL
