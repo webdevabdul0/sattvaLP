@@ -1,15 +1,20 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Link, Menu } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../public/images/logo-icon.png";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <header className="w-full px-4 pt-3 pb-2 flex items-center justify-center bg-dark/30 backdrop-blur-3xl">
@@ -67,88 +72,94 @@ const Header = () => {
               className="w-6 h-6 text-white cursor-pointer"
               onClick={() => setMenuOpen(!menuOpen)}
             />
-            {menuOpen && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="absolute right-0 mt-2 py-6 w-56 bg-dark/80 backdrop-blur-lg rounded-2xl shadow-lg p-5 uppercase"
-              >
-                {/* Close Button */}
-                <button
-                  onClick={() => setMenuOpen(false)}
-                  className="absolute top-3 left-3 text-primary text-xl font-bold"
-                >
-                  ✕
-                </button>
+            {mounted && (
+              <AnimatePresence>
+                {menuOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="absolute right-0 mt-2 py-6 w-56 bg-dark/80 backdrop-blur-lg rounded-2xl shadow-lg p-5 uppercase"
+                  >
+                    {/* Close Button */}
+                    <button
+                      onClick={() => setMenuOpen(false)}
+                      className="absolute top-3 left-3 text-primary text-xl font-bold"
+                    >
+                      ✕
+                    </button>
 
-                {/* Links */}
-                <div className="mt-8 space-y-4">
-                  <a
-                    href="/#jogszabalyok"
-                    className="block text-white hover:text-primary"
-                  >
-                    ◇ Jogszabályok
-                  </a>
-                  <a
-                    href="/#filozofia"
-                    className="block text-white hover:text-primary"
-                  >
-                    Sattva Filozófia
-                  </a>
-                  <a
-                    href="/#ajanlott-app"
-                    className="block text-white hover:text-primary"
-                  >
-                    Ajánlatkérés
-                  </a>
-                  <a
-                    href="/#kapcsolat"
-                    className="block text-white hover:text-primary"
-                  >
-                    Kapcsolat
-                  </a>
-                </div>
+                    {/* Links */}
+                    <div className="mt-8 space-y-4">
+                      <a
+                        href="/#jogszabalyok"
+                        className="block text-white hover:text-primary"
+                      >
+                        ◇ Jogszabályok
+                      </a>
+                      <a
+                        href="/#filozofia"
+                        className="block text-white hover:text-primary"
+                      >
+                        Sattva Filozófia
+                      </a>
+                      <a
+                        href="/#ajanlott-app"
+                        className="block text-white hover:text-primary"
+                      >
+                        Ajánlatkérés
+                      </a>
+                      <a
+                        href="/#kapcsolat"
+                        className="block text-white hover:text-primary"
+                      >
+                        Kapcsolat
+                      </a>
+                    </div>
 
-                {/* Divider */}
-                <div className="border-t border-gray-600 my-4"></div>
+                    {/* Divider */}
+                    <div className="border-t border-gray-600 my-4"></div>
 
-                {/* Social Icons */}
-                <div className="flex justify-center space-x-3">
-                  <a
-                    href="/#"
-                    className="p-2 bg-primary rounded-full flex items-center justify-center"
-                  >
-                    <FaFacebookF className="w-3.5 h-3.5 text-dark" />
-                  </a>
-                  <a
-                    href="/#"
-                    className="p-2 bg-primary rounded-full flex items-center justify-center"
-                  >
-                    <FaTwitter className="w-3.5 h-3.5 text-dark" />
-                  </a>
-                  <a
-                    href="/#"
-                    className="p-2 bg-primary rounded-full flex items-center justify-center"
-                  >
-                    <FaInstagram className="w-3.5 h-3.5 text-dark" />
-                  </a>
-                </div>
-              </motion.div>
+                    {/* Social Icons */}
+                    <div className="flex justify-center space-x-3">
+                      <a
+                        href="/#"
+                        className="p-2 bg-primary rounded-full flex items-center justify-center"
+                      >
+                        <FaFacebookF className="w-3.5 h-3.5 text-dark" />
+                      </a>
+                      <a
+                        href="/#"
+                        className="p-2 bg-primary rounded-full flex items-center justify-center"
+                      >
+                        <FaTwitter className="w-3.5 h-3.5 text-dark" />
+                      </a>
+                      <a
+                        href="/#"
+                        className="p-2 bg-primary rounded-full flex items-center justify-center"
+                      >
+                        <FaInstagram className="w-3.5 h-3.5 text-dark" />
+                      </a>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             )}
           </div>
         </div>
       </div>
 
       {/* Fullscreen Mobile Menu */}
-      {mobileMenuOpen && (
-        <motion.div
-          initial={{ x: "100%", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: "100%", opacity: 0 }}
-          transition={{ type: "tween", duration: 0.3 }}
-          className="fixed w-screen h-screen inset-0 bg-dark/90 backdrop-blur-2xl flex flex-col items-center justify-center text-white z-50"
-        >
+      {mounted && (
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ x: "100%", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: "100%", opacity: 0 }}
+              transition={{ type: "tween", duration: 0.3 }}
+              className="fixed w-screen h-screen inset-0 bg-dark/90 backdrop-blur-2xl flex flex-col items-center justify-center text-white z-50"
+            >
           {/* Close Button */}
           <button
             onClick={() => setMobileMenuOpen(false)}
@@ -247,6 +258,8 @@ const Header = () => {
             </a>
           </div>
         </motion.div>
+          )}
+        </AnimatePresence>
       )}
     </header>
   );

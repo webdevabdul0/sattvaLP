@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
@@ -42,22 +42,28 @@ const slides = [
 
 const Hero = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <section className="relative w-full h-screen">
       {/* Swiper Slider */}
-      <Swiper
-        modules={[Navigation, Autoplay]}
-        slidesPerView={1}
-        loop={true}
-        autoplay={{ delay: 5000 }}
-        navigation={{
-          nextEl: ".hero-next",
-          prevEl: ".hero-prev",
-        }}
-        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-        className="w-full h-full"
-      >
+      {mounted && (
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          slidesPerView={1}
+          loop={true}
+          autoplay={{ delay: 5000 }}
+          navigation={{
+            nextEl: ".hero-next",
+            prevEl: ".hero-prev",
+          }}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+          className="w-full h-full"
+        >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="relative w-full h-full">
             {/* Next.js Image */}
@@ -99,7 +105,44 @@ const Hero = () => {
             </div>
           </SwiperSlide>
         ))}
-      </Swiper>
+        </Swiper>
+      )}
+
+      {/* Fallback for SSR */}
+      {!mounted && (
+        <div className="absolute inset-0">
+          <Image
+            src={slides[0].image}
+            alt={slides[0].title1}
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
+            <div className="flex flex-col items-center">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-mono mb-2 uppercase">
+                {slides[0].title1}
+              </h1>
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-mono mb-14 text-[#CDAF50] uppercase">
+                {slides[0].title2}
+              </h1>
+            </div>
+            <p className="text-sm sm:text-base max-w-2xl mb-6">
+              {slides[0].description}
+            </p>
+            <Button 
+              text="Kérj ingyenes konzultációt" 
+              onClick={() => {
+                document.getElementById('kapcsolat')?.scrollIntoView({ 
+                  behavior: 'smooth',
+                  block: 'start'
+                });
+              }}
+            />
+          </div>
+        </div>
+      )}
 
       {/* Progress Dots */}
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
